@@ -10,6 +10,6 @@ app.listen(3000, async () => {
     console.log("MongoDB connected")
     let ser = new service();
     await ser.create({
-        content: 'Done with #refactor ?'
+        content: 'capital #ARYAN'
     })
 });
