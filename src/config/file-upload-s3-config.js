@@ -16,8 +16,7 @@ const s3 = new aws.S3();
 const upload = multer({
     storage: multerS3({
         s3: s3,
-        bucket: Process.env.BUCKET_NAME,
-        acl: 'public-read',
+        bucket: process.env.BUCKET_NAME,
         metadata: function (req, file, cb){
             cb(null, {fieldName: file.fieldname});
         },
