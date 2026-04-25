@@ -4,8 +4,8 @@ import upload from '../config/file-upload-s3-config.js'
 
 const singleUploader = upload.single('image');
 
-
 const tweetService = new TweetService();
+
 export const createTweet = async (req, res) => {
     try {
         singleUploader(req, res, async function(err, data){
